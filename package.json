@@ -1,35 +1,19 @@
 {
-  "name": "qase-cypress",
-  "version": "2.2.5",
-  "description": "A demo repository with Examples, for troubleshooting problems and for feature requests.",
-  "main": "",
-  "type": "module",
-  "directories": {
-    "test": "cypress/e2e/tests"
+  "name": "cypress-qase-reporter-issue",
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {
+    "cypress": "^13.17.0",
+    "cypress-multi-reporters": "^2.0.5",
+    "cypress-qase-reporter": "^2.3.1",
+    "dotenv": "^16.4.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4",
+    "node-xlsx": "^0.21.0",
+    "xlsx": "^0.18.5"
   },
   "scripts": {
-    "test": "QASE_MODE=testops npx cypress run --spec cypress/e2e/tests/examples"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cskmnrpt/qase-cypress.git"
-  },
-  "keywords": [
-    "qase-cypress",
-    "qaseio",
-    "qase-tms",
-    "qase-javascript"
-  ],
-  "author": "Qase Support",
-  "license": "Unlicense",
-  "bugs": {
-    "url": "https://github.com/cskmnrpt/qase-cypress/issues"
-  },
-  "homepage": "https://github.com/cskmnrpt/qase-cypress#readme",
-  "devDependencies": {
-    "cypress": "^13.16.1",
-    "cypress-multi-reporters": "^2.0.4",
-    "cypress-qase-reporter": "^2.3.1",
-    "prettier": "^3.4.2"
+    "test": "cypress run",
+    "open": "cypress open"
   }
 }
