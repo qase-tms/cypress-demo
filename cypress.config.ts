@@ -2,6 +2,9 @@ import { defineConfig } from "cypress";
 import "dotenv/config";
 import fs = require("fs");
 
+// Import Qase hooks
+const { beforeRunHook, afterRunHook } = require("cypress-qase-reporter/hooks");
+
 export default defineConfig({
   reporter: "cypress-multi-reporters",
   reporterOptions: {
@@ -30,12 +33,26 @@ export default defineConfig({
       require("cypress-qase-reporter/plugin")(on, config);
       require("cypress-qase-reporter/metadata")(on);
 
-      // ❌ Problematic hook that interferes with run completion
-      on("after:run", async (results) => {
-        console.log("✅ Custom after:run hook fired");
-        console.log("Results object:", results);
+      // ✅ Proper override of hooks
+      on("before:run", async () => {
+        console.log("override before:run");
+        await beforeRunHook(config);
       });
 
+      on("after:run", async (results) => {
+  console.log("override after:run");
+  await afterRunHook(config);
+
+  // Type-safe logging
+  const totalTests = results.totalTests ?? 0;
+  const totalPassed = "totalPassed" in results ? results.totalPassed : 0;
+  const totalFailed = "totalFailed" in results ? results.totalFailed : 0;
+
+  console.log("✅ Custom after:run hook fired");
+  console.log(`Total tests: ${totalTests}, Passed: ${totalPassed}, Failed: ${totalFailed}`);
+});
+
+      // Custom tasks
       on("task", {
         fileExists(filename) {
           return fs.existsSync(`cypress/e2e/${filename}`);
