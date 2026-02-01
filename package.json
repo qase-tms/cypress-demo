@@ -1,6 +1,6 @@
 {
   "name": "qase-cypress",
-  "version": "2.2.5",
+  "version": "3.1.2",
   "description": "A demo repository with Examples, for troubleshooting problems and for feature requests.",
   "main": "",
   "type": "module",
@@ -30,7 +30,7 @@
   "devDependencies": {
     "cypress": "^13.16.1",
     "cypress-multi-reporters": "^2.0.4",
-    "cypress-qase-reporter": "^3.1.0",
+    "cypress-qase-reporter": "^3.1.2",
     "prettier": "^3.4.2"
   }
 }
