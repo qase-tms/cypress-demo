@@ -6,26 +6,26 @@ import qaseMetadata from "cypress-qase-reporter/metadata";
 export default defineConfig({
   reporter: "cypress-multi-reporters",
   reporterOptions: {
-    reporterEnabled: "cypress-qase-reporter",
+    reporterEnabled: "cypress-qase-reporter, spec, mocha-junit-reporter",
     cypressQaseReporterReporterOptions: {
-      /*
+      
             // You can define the reporter options here, or in a separate `qase.config.json` file.
 
             mode: 'testops',
-            debug: false,
+            debug: true,
             testops: {
               api: {
-                token: 'api_key',
+                token: '<token>',
               },
-              project: 'project_code',
+              project: '<code>',
               uploadAttachments: true,
               run: {
               //  id: 1,
-                title: "Your test run title",
+                title: "Invalid check",
                 description: "Cypress Automated Test run",
                 complete: true,
               },
-              environment: 'prod',
+              
             },
             framework: {
                 cypress: {
@@ -34,7 +34,10 @@ export default defineConfig({
                     uploadDelay: 10,
                 }
             }
-          */
+          
+    },
+    mochaJunitReporterReporterOptions: {
+      mochaFile: 'cypress/reports/junit-[hash].xml',
     },
   },
   video: true,

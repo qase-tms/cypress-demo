@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="17.618" tests="3" failures="3">
+  <testsuite name="Root Suite" timestamp="2026-04-10T08:17:57" tests="0" file="cypress/e2e/tests/examples/troubleshooting.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Status Classification Demo" timestamp="2026-04-10T08:17:57" tests="3" time="17.615" failures="3">
+    <testcase name="Status Classification Demo Test 1 - Should be FAILED: element found but not interactable" time="0.000" classname="Test 1 - Should be FAILED: element found but not interactable">
+      <failure message="Timed out retrying after 4050ms: `cy.click()` failed because this element is not visible:
+
+`&lt;input type=&quot;radio&quot; style=&quot;width: 0px; height: 0px; overflow: hidden;&quot;&gt;`
+
+This element `&lt;input&gt;` is not visible because it has an effective width and height of: `0 x 0` pixels.
+
+Fix this problem, or use `{force: true}` to disable error checking.
+
+https://on.cypress.io/element-cannot-be-interacted-with" type="CypressError"><![CDATA[CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element is not visible:
+
+`<input type="radio" style="width: 0px; height: 0px; overflow: hidden;">`
+
+This element `<input>` is not visible because it has an effective width and height of: `0 x 0` pixels.
+
+Fix this problem, or use `{force: true}` to disable error checking.
+
+https://on.cypress.io/element-cannot-be-interacted-with
+    at runVisibilityCheck (https://example.com/__cypress/runner/cypress_runner.js:144829:58)
+    at Object.isStrictlyVisible (https://example.com/__cypress/runner/cypress_runner.js:144843:10)
+    at runAllChecks (https://example.com/__cypress/runner/cypress_runner.js:113143:26)
+    at retryActionability (https://example.com/__cypress/runner/cypress_runner.js:113211:16)
+    at tryCatcher (https://example.com/__cypress/runner/cypress_runner.js:1830:23)
+    at Promise.attempt.Promise.try (https://example.com/__cypress/runner/cypress_runner.js:4338:29)
+    at whenStable (https://example.com/__cypress/runner/cypress_runner.js:143616:68)
+    at <unknown> (https://example.com/__cypress/runner/cypress_runner.js:143557:14)
+    at tryCatcher (https://example.com/__cypress/runner/cypress_runner.js:1830:23)
+    at Promise._settlePromiseFromHandler (https://example.com/__cypress/runner/cypress_runner.js:1542:31)
+    at Promise._settlePromise (https://example.com/__cypress/runner/cypress_runner.js:1599:18)
+    at Promise._settlePromise0 (https://example.com/__cypress/runner/cypress_runner.js:1644:10)
+    at Promise._settlePromises (https://example.com/__cypress/runner/cypress_runner.js:1724:18)
+    at Promise._fulfill (https://example.com/__cypress/runner/cypress_runner.js:1668:18)
+    at <unknown> (https://example.com/__cypress/runner/cypress_runner.js:5473:46)
+From Your Spec Code:
+    at Context.eval (webpack://qase-cypress/./cypress/e2e/tests/examples/troubleshooting.cy.js:17:34)]]></failure>
+    </testcase>
+    <testcase name="Status Classification Demo Test 2 - Should be INVALID: API request times out" time="0.000" classname="Test 2 - Should be INVALID: API request times out">
+      <failure message="`cy.request()` timed out waiting `5000ms` for a response from your server.
+
+The request we sent was:
+
+Method: GET
+URL: https://httpstat.us/408
+
+No response was received within the timeout.
+
+https://on.cypress.io/request" type="CypressError"><![CDATA[CypressError: `cy.request()` timed out waiting `5000ms` for a response from your server.
+
+The request we sent was:
+
+Method: GET
+URL: https://httpstat.us/408
+
+No response was received within the timeout.
+
+https://on.cypress.io/request
+    at <unknown> (https://example.com/__cypress/runner/cypress_runner.js:132765:70)
+    at tryCatcher (https://example.com/__cypress/runner/cypress_runner.js:1830:23)
+    at <unknown> (https://example.com/__cypress/runner/cypress_runner.js:4209:41)
+    at tryCatcher (https://example.com/__cypress/runner/cypress_runner.js:1830:23)
+    at Promise._settlePromiseFromHandler (https://example.com/__cypress/runner/cypress_runner.js:1542:31)
+    at Promise._settlePromise (https://example.com/__cypress/runner/cypress_runner.js:1599:18)
+    at Promise._settlePromise0 (https://example.com/__cypress/runner/cypress_runner.js:1644:10)
+    at Promise._settlePromises (https://example.com/__cypress/runner/cypress_runner.js:1720:18)
+    at _drainQueueStep (https://example.com/__cypress/runner/cypress_runner.js:2430:12)
+    at _drainQueue (https://example.com/__cypress/runner/cypress_runner.js:2423:9)
+    at Async._drainQueues (https://example.com/__cypress/runner/cypress_runner.js:2439:5)
+    at Async.drainQueues (https://example.com/__cypress/runner/cypress_runner.js:2309:14)
+From Your Spec Code:
+    at Context.eval (webpack://qase-cypress/./cypress/e2e/tests/examples/troubleshooting.cy.js:23:7)]]></failure>
+    </testcase>
+    <testcase name="Status Classification Demo Test 3 - Should be FAILED: waited for API call that never happened" time="0.000" classname="Test 3 - Should be FAILED: waited for API call that never happened">
+      <failure message="Timed out retrying after 5000ms: `cy.wait()` timed out waiting `5000ms` for the 1st request to the route: `filterQuery`. No request ever occurred.
+
+https://on.cypress.io/wait" type="CypressError"><![CDATA[CypressError: Timed out retrying after 5000ms: `cy.wait()` timed out waiting `5000ms` for the 1st request to the route: `filterQuery`. No request ever occurred.
+
+https://on.cypress.io/wait
+    at cypressErr (https://example.com/__cypress/runner/cypress_runner.js:75921:18)
+    at Object.errByPath (https://example.com/__cypress/runner/cypress_runner.js:75975:10)
+    at checkForXhr (https://example.com/__cypress/runner/cypress_runner.js:135214:84)
+    at <unknown> (https://example.com/__cypress/runner/cypress_runner.js:135240:28)
+    at tryCatcher (https://example.com/__cypress/runner/cypress_runner.js:1830:23)
+    at Promise.attempt.Promise.try (https://example.com/__cypress/runner/cypress_runner.js:4338:29)
+    at whenStable (https://example.com/__cypress/runner/cypress_runner.js:143616:68)
+    at <unknown> (https://example.com/__cypress/runner/cypress_runner.js:143557:14)
+    at tryCatcher (https://example.com/__cypress/runner/cypress_runner.js:1830:23)
+    at Promise._settlePromiseFromHandler (https://example.com/__cypress/runner/cypress_runner.js:1542:31)
+    at Promise._settlePromise (https://example.com/__cypress/runner/cypress_runner.js:1599:18)
+    at Promise._settlePromise0 (https://example.com/__cypress/runner/cypress_runner.js:1644:10)
+    at Promise._settlePromises (https://example.com/__cypress/runner/cypress_runner.js:1724:18)
+    at Promise._fulfill (https://example.com/__cypress/runner/cypress_runner.js:1668:18)
+    at <unknown> (https://example.com/__cypress/runner/cypress_runner.js:5473:46)
+From Your Spec Code:
+    at Context.eval (webpack://qase-cypress/./cypress/e2e/tests/examples/troubleshooting.cy.js:39:7)]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>
